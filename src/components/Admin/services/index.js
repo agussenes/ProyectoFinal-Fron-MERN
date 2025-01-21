@@ -1,64 +1,64 @@
 import axios from 'axios';
+
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
-
 export async function getCursos(){
-    try {
-        const response = await axios.get({
-            method: 'GET',
-            url: `${baseUrl}/cursos`
+    try{
+        const response = await axios({
+            url: `${baseUrl}/cursos`,
+            method: "GET",
         })
         return response
     }
-    catch(e){
+    catch (e) {
         console.log(e)
     }
 }
 
 export async function saveCursos(cursosData){
     const formData = new FormData();
-    formData.append('idioma', cursosData.idioma);
-    formData.append('imagen', cursosData.imagen);
-    formData.append('dia', cursosData.dia);
-    formData.append('horario', cursosData.horario);
-    formData.append('modalidad', cursosData.modalidad);
-
-    try {
-        const response = await axios.post({
-            method: 'POST',
-             url: `${baseUrl}/cursos`,
-             data: formData
+    formData.append("idioma", cursosData.idioma )
+    formData.append("imagen", cursosData.imagen )
+    formData.append("dia", cursosData.dia )
+    formData.append("horario", cursosData.horario )
+    formData.append("modalidad", cursosData.modalidad )
+    try{
+        const response = await axios({
+            url: `${baseUrl}/cursos`,
+            method: "POST",
+            data: formData
         })
         return response
-} 
-catch(e){
-    console.log(e)
-}
+    }
+    catch(e){
+        console.log(e);
+    }
+
 }
 
 export async function updateCursos(_id, datosNuevo){
-    try {
+    try{
         const response = await axios({
-             method: 'PUT',
-             url: `${baseUrl}/cursos/${_id}`,
-             data: datosNuevo
+            url: `${baseUrl}/cursos/${_id}`,
+            method: "PUT",
+            data: datosNuevo
         })
         return response
-} 
-catch(e){
-    console.log(e)
-}
+    }
+    catch (e) {
+        console.log(e)
+    }
 }
 
 export async function deleteCursos(_id){
-    try {
+    try{
         const response = await axios({
-             method: 'DELETE',
-             url: `${baseUrl}/cursos/${_id}`,
+            url: `${baseUrl}/cursos/${_id}`,
+            method: "DELETE"
         })
         return response
-} 
-catch(e){
-    console.log(e)
-}
+    }
+    catch (e) {
+        console.log(e)
+    }
 }

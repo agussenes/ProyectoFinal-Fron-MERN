@@ -19,7 +19,7 @@ function Navbar() {
             <NavDropdown.Item className='linksdrop2' as={Link} to="/cursos">Cursos</NavDropdown.Item>
           </NavDropdown>
 
-          {/* <Link className='links' to="/admin">Administración</Link> */}
+          <Link className='links' to="/admin">Administración</Link>
 
           {/* Agregar enlaces o botones para abrir los componentes de registro e inicio de sesión */}
           <li><button onClick={() => setShowRegister(true)}>Registro</button></li>
