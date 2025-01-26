@@ -1,0 +1,134 @@
+/* --- Encapsular estilos solo para el registro --- */
+.register-page {
+    padding-top: 5rem;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../../imagenes/auth/fondoRegister.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .register-box {
+    position: relative;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    backdrop-filter: blur(12px); /* Desenfoque */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Título */
+  .register-box h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Input y Label (Efecto flotante) */
+  .register-input-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .register-input-container input {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .register-input-container input:focus {
+    border: 2px solid #497d56;
+  }
+  
+  .register-input-container input:focus + label,
+  .register-input-container input:not(:placeholder-shown) + label {
+    transform: translateY(-1.5rem);
+    font-size: 0.85rem;
+    color: #ffffff;
+  }
+  
+  /* Label Flotante */
+  .register-input-container label {
+    position: absolute;
+    top: 50%;
+    left: 0.8rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #ffffff;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Botón de registro */
+  .register-button {
+    background: #E4572E;
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+  }
+  
+  .register-button:hover {
+    background: #ffffff17 !important;
+    transform: translateY(-2px);
+    color: #E4572E;
+    border-color: #E4572E;
+  }
+  
+  /* Link de inicio de sesión */
+  .register-login-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  .register-login-link a {
+    color: #E4572E;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .register-login-link a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+  /* Mensajes de éxito y error */
+  .success-message {
+    color: #497d56;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .error-message {
+    color: #e3342f;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  

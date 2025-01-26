@@ -1,0 +1,147 @@
+
+
+.ContainerGenContacto{
+    background-color: #F1D28F;
+    margin-top: -1rem;
+    min-height: 60vh;
+}
+
+.formYubi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cabecera{
+    margin-top: 5rem;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 1rem;    
+}
+
+.cabecera h2{    
+    font-size: 24px;
+    font-weight: bolder;
+    color: #13373b;
+    padding: 1.2rem 0;
+    background-color:#fde4af;
+    border-radius: .6rem;
+    margin-left: 2rem;
+    margin-right:2rem;
+}
+
+.ubicacion{
+    padding: 1rem;
+}
+
+.ubicacion h3{
+    text-align: center;
+    font-weight: 500;
+    color: #13373b;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.redesSociales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.redesSociales div:hover{
+    font-size: 3.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+  
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.contenedorredesflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+@media screen and (max-width: 767px){
+    .formYubi{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 991px){
+    .formYubi{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    .formYubi{
+        grid-template-columns: 1fr;
+    }
+
+    .redesSociales{
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 1360px){
+    .redesSociales{
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 1920px){
+   
+    .formYubi{
+        padding-right: 12rem;
+        padding-left: 12rem;
+    }
+
+    .redesSociales{
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+        
+        
+    }
+    
+    .ubicacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #FDE4AF;
+        width: max-content;
+        height: max-content;
+        border-radius: 2rem;
+    }
+
+   
+
+    .facebook{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .instagram{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .whatsapp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

@@ -1,0 +1,117 @@
+
+.contenedorGeneral{
+    padding-top: 3rem;
+    text-align: center;
+    background-color: #FDE4AF;
+}
+
+.contenedorGeneral h2{
+    padding-bottom: 2rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #13373b;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 3rem;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(253, 253, 253);
+    border-radius: 15px;
+    box-shadow: 2px 7px 9px rgba(203, 202, 207, 0.308);
+    background-color: #30646B;
+    color: #fff;
+}
+
+.producto img {
+    width: 100%;
+    height: 20rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5%;
+}
+
+.producto h3{
+    font-weight: 700;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.producto p{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.botonProducto{
+    border-radius: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #fff;
+    background-color: #E4572E;
+    border: 1px solid #fff;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.botonProducto:hover{
+    color: #E4572E;
+    background-color:#fff ;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.producto hr{
+    border: 1px solid #ffffff;
+    width: 95%;
+
+}
+
+
+/* Media Query para Escritorios (pantallas grandes) */
+@media (min-width: 1025px) {
+    .productos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Media Query para Tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .productos{
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Media Query para Móviles */
+  @media (max-width: 767px) {
+    .productos{
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  
+  /* Media Query para Móviles pequeños */
+  @media (max-width: 480px) {
+    .productos{        
+        grid-template-columns: 1fr;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .producto{
+        width: 100%;
+    }
+  }

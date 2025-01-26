@@ -1,0 +1,79 @@
+/* /////////////////////////////////
+ESTE CSS ESTA ECHO DE MOBILES A PC
+////////////////////////////////// */
+
+.contenedorGeneralFormulario {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #30646B;
+    margin: 1rem;
+    border-radius: 0.7rem;
+    width: max-content;
+}
+
+.contenedorGeneralFormulario form{
+    display: grid
+}
+
+.contenedorGeneralFormulario form div{
+    margin-bottom: 1rem;
+}
+
+.contenedorGeneralFormulario form div label{
+    font-weight: 700;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.contenedorGeneralFormulario button{
+    width: 10rem;
+}
+
+.boxMensaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxMensaje input{
+    height: 5rem;
+    width: 100%;
+}
+
+.marginEmail{
+    margin-right: 2.5rem !important;
+}
+
+.boxNombre{
+    margin-right: 1.5rem !important;
+}
+
+.botonEnviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonEnviar button{
+    border-radius: 0.5rem;
+    border: 1px solid #E4572E;
+    background-color: #FDE4AF;
+    font-weight: 700;
+}
+
+.botonEnviar button:hover{
+    background-color: #F1D28F;
+    font-weight: 900;
+}
+
+.mensajeEnviado{
+    color: #fff;
+}
+
+

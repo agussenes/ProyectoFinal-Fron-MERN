@@ -1,0 +1,57 @@
+/* Espaciado para los botones en la parte superior */
+.my-4 {
+    margin-bottom: 2rem;
+}
+
+.adminMain{
+    padding-top: 6rem;
+}
+
+button {
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #198754;
+    color: #fff;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card img {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.row.g-4 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}

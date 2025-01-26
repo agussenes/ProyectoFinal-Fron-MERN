@@ -1,0 +1,235 @@
+/* /////////////////////////////////
+ESTE CSS ESTA ECHO DE MOBILES A PC
+////////////////////////////////// */
+
+
+/* historia  */
+
+.containerHeroHis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 8rem !important;
+    padding-bottom: 3rem;
+    background-color: #FDE4AF;
+    margin-top: 2.5rem;
+
+}
+
+.contentHero h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #13373b;
+    padding: 1.2rem 0;
+    text-align: center;
+}
+
+.contentHero p {
+    text-align: center;
+}
+
+
+
+
+/* valores  */
+
+.generalArq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #F1D28F;
+}
+
+.contenedores {}
+
+.contenedores h2 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: #13373b;
+    padding: 1.2rem 0;
+    background-color:#fde4af;
+    border-radius: .6rem;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedores h3 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: #13373b;
+    padding: 1.2rem 0;
+    background-color:#fde4af;
+    border-radius: .6rem;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedores p {
+    text-align: center;
+}
+
+.contenedoresIMG img {
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+}
+
+
+/* Lllamda accion  */
+
+
+.containerButtom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #FDE4AF;
+}
+
+.containerButtom button {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+/* /////////////
+ responsive 
+///////////// */
+
+@media screen and (min-width:768px) {
+
+    /* historia  */
+
+    .containerHeroHis {
+        padding-right: 8rem;
+        padding-left: 8rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .containerValoresyObjetivos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+
+    /* valores  */
+
+    .generalArq {
+        padding-right: 8rem;
+        padding-left: 8rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .contenedores {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    /* historia  */
+
+    .containerHeroHis {
+        padding-right: 12rem;
+        padding-left: 12rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .containerValoresyObjetivos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+
+    /* valores  */
+
+    .generalArq {
+        padding-right: 12rem;
+        padding-left: 12rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .contenedores {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and (min-width:1920px) {
+
+    /* historia  */
+
+    .containerHeroHis {
+        padding-right: 22rem;
+        padding-left: 22rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .containerValoresyObjetivos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+
+    /* valores  */
+
+    .generalArq {
+        padding-right: 22rem;
+        padding-left: 22rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .contenedores {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .contenedoresIMG {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedoresIMG img {
+        width: 78%;
+        height: auto;
+    }
+
+}
