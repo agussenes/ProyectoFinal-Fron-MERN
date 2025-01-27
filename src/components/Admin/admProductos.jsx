@@ -39,19 +39,19 @@ export const AdmProductos = () => {
     return (
         <>
             <Container className="my-4">
-                <Row className="mb-4 justify-content-center">
-                    <Col xs="auto">
+                <Row className="mb-4 justify-content-evenly">
+                    <Col xs="auto" >
                         <AgregarProductos />
                     </Col>
                     <Col xs="auto">
                         <ActProductos onProductUpdate={handleUpdate} />
                     </Col>
-                    <Col xs="auto">
+                    <Col xs="auto" className='eliminarProdBoton'>
                         <EliminarProducto onProductUpdate={handleUpdate} />
                     </Col>
                 </Row>
 
-                <Row className="g-4">
+                <Row className="g-4 justify-content-evenly">
                     {productos.map(({ _id, nombre, descripcion, categoria, precio, imagen }) => (
                         <Col key={_id} xs={12} sm={6} md={4} lg={3}>
                             <Card className="h-100 shadow-sm">

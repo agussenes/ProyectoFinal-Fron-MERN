@@ -19,8 +19,8 @@ function Admin() {
                 activeKey={key}
                 onSelect={(k) => setKey(k)}
             >
-                <Tab eventKey='productos' title={
-                    <span style={{ fontSize: '16px', fontWeight: 'bold', color: 'blue', width: '200px' }}>
+                <Tab eventKey='productos'  title={
+                    <span className='tituloTabAdm'  style={{ fontSize: '16px', fontWeight: 'bold', width: '200px' }}>
                         Productos
                     </span>
                 }>
