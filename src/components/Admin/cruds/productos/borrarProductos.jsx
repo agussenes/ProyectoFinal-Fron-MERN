@@ -47,7 +47,7 @@ function EliminarProducto() {
 
     return (
         <div>
-            <Button className=' shadow m-3' variant="primary" type="submit" value="Enviar" onClick={handleShow}>Borrar producto</Button>
+            <Button className=' shadow m-3' variant="primary" type="submit" value="Enviar" onClick={handleShow}>Borrar Producto</Button>
 
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header>
@@ -70,7 +70,7 @@ function EliminarProducto() {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="success" type="submit" onClick={handleDelete}>Borrar curso</Button>
+                    <Button variant="success" type="submit" onClick={handleDelete}>Borrar producto</Button>
                     <Button variant="danger" onClick={handleClose}>Cancelar</Button>
                 </Modal.Footer>
 

@@ -1,36 +1,36 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faGear, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { UserContext } from "../../contexts/UserContext";
 import "./Navbar.css";
 
-const Navbar = ({ onBuscar, carrito }) => {
-  const [terminoBusqueda, setTerminoBusqueda] = useState("");
-  const { user, logout } = useContext(UserContext); // Contexto
+const Navbar = () => {
+  const { user, carrito, logout } = useContext(UserContext); 
+  const navigate = useNavigate();
 
-  const handleSearchChange = (e) => {
-    setTerminoBusqueda(e.target.value);
-    onBuscar(e.target.value);
+  // Total de produtos no carrinho (considerando a quantidade de cada item)
+  const totalProductos = carrito.reduce(
+    (total, producto) => total + (producto.cantidad || 1), 
+    0
+  );
+
+  // Função de logout
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
   };
-
-  const totalProductos = carrito.reduce((total, producto) => total + (producto.cantidad || 0), 0);
 
   return (
     <div className="containerNavbar">
+      {/* Logo */}
       <div className="brand">
         <Link to="/">
           <img src="img/marca/LogoConNombreeee.png" alt="Cururu" />
         </Link>
       </div>
-      <div className="searchBar">
-        <input
-          type="text"
-          placeholder="Buscar productos"
-          value={terminoBusqueda}
-          onChange={handleSearchChange}
-        />
-      </div>
+
+      {/* Navegação */}
       <nav className="navBar">
         <ul className="navLinks">
           <li><Link to="/">Inicio</Link></li>
@@ -45,7 +45,6 @@ const Navbar = ({ onBuscar, carrito }) => {
               </div>
             </Link>
           </li>
-          {/* Mostrar enlace al panel de administración si el usuario es Admin */}
           {user?.rol === "Admin" && (
             <li className="d-flex align-items-center">
               <Link to="/admin" className="d-flex align-items-center">
@@ -53,14 +52,19 @@ const Navbar = ({ onBuscar, carrito }) => {
                 <FontAwesomeIcon icon={faGear} />
               </Link>
             </li>
-
           )}
         </ul>
+
+        {/* Botões de login/logout */}
         <div className="navButtons">
           {user ? (
             <>
               <span className="text-light fw-bold">Hola, {user.username}!</span>
-              <button onClick={logout} className="navButton">Logout <FontAwesomeIcon icon={faRightFromBracket} style={{ marginRight: "5px" }} />
+              <button 
+                className="navButton" 
+                onClick={handleLogout} 
+              >
+                Logout <FontAwesomeIcon icon={faRightFromBracket} style={{ marginRight: "5px" }} />
               </button>
             </>
           ) : (

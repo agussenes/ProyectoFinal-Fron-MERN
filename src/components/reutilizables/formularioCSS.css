@@ -1,79 +1,111 @@
-/* /////////////////////////////////
-ESTE CSS ESTA ECHO DE MOBILES A PC
-////////////////////////////////// */
-
+/* Container geral do formulário */
 .contenedorGeneralFormulario {
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #30646B;
-    margin: 1rem;
-    border-radius: 0.7rem;
-    width: max-content;
-}
-
-.contenedorGeneralFormulario form{
-    display: grid
-}
-
-.contenedorGeneralFormulario form div{
-    margin-bottom: 1rem;
-}
-
-.contenedorGeneralFormulario form div label{
-    font-weight: 700;
-    margin-right: 1rem;
-    color: #fff;
-}
-
-.contenedorGeneralFormulario button{
-    width: 10rem;
-}
-
-.boxMensaje{
+    background-color: #30646b; /* Fundo verde-azulado */
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Largura total do container */
+    max-width: 350px; /* Largura mais compacta */
+    margin: .1rem auto; /* Centralizado horizontalmente */
+    margin-bottom: 3rem;
+    height: auto; /* Altura ajustável ao conteúdo */
+    min-height: 40vh; /* Altura reduzida para 40% da tela */
+  }
+  
+  /* Formulário */
+  .formulario-contacto {
+    width: 100%;
+    display: grid;
+    gap: 1rem; /* Espaçamento entre os campos */
+  }
+  
+  /* Campos do formulário */
+  .formulario-contacto div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.boxMensaje input{
-    height: 5rem;
-    width: 100%;
-}
-
-.marginEmail{
-    margin-right: 2.5rem !important;
-}
-
-.boxNombre{
-    margin-right: 1.5rem !important;
-}
-
-.botonEnviar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.botonEnviar button{
+    gap: 0.5rem;
+  }
+  
+  .formulario-contacto label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fde4af; /* Bege */
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 0.8rem;
+    border: 1px solid #fde4af; /* Bege */
     border-radius: 0.5rem;
-    border: 1px solid #E4572E;
-    background-color: #FDE4AF;
-    font-weight: 700;
-}
-
-.botonEnviar button:hover{
-    background-color: #F1D28F;
-    font-weight: 900;
-}
-
-.mensajeEnviado{
-    color: #fff;
-}
-
-
+    font-size: 1rem;
+    background-color: #e6f0ee; /* Fundo suave */
+    color: #2d3e3f; /* Texto escuro */
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  .formulario-contacto input::placeholder,
+  .formulario-contacto textarea::placeholder {
+    color: #a0b2b3;
+  }
+  
+  /* Foco nos campos */
+  .formulario-contacto input:focus,
+  .formulario-contacto textarea:focus {
+    border-color: #e4572e; /* Laranja */
+    box-shadow: 0 0 5px #e4572e;
+  }
+  
+  /* Botão de envio */
+  .botonEnviar button {
+    background-color: #fde4af; /* Bege */
+    color: #30646b; /* Verde-azulado */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem; /* Botão um pouco menor */
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .botonEnviar button:hover {
+    background-color: #f1d28f; /* Bege mais claro */
+    transform: scale(1.05);
+  }
+  
+  /* Mensagens de feedback */
+  .mensajeExito {
+    color: #86c232; /* Verde sucesso */
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .mensajeError {
+    color: #e4572e; /* Laranja erro */
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Caixa de texto para mensagens */
+  .boxMensaje textarea {
+    resize: none; /* Impede redimensionamento */
+    height: 3.5rem; /* Diminuímos ainda mais a altura da caixa de mensagem */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .contenedorGeneralFormulario {
+      padding: 1rem;
+      margin: 1rem;
+      min-height: 40vh; /* Garante que o formulário ocupe menos da tela em dispositivos menores */
+    }
+  
+    .formulario-contacto {
+      gap: 1rem;
+    }
+  }
+  

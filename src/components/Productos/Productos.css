@@ -1,17 +1,14 @@
 /* Estilo general para el contenedor principal */
-
 .contenedorGeneralProductos {
   background-color: #f1d28f;
 }
-
 
 .backGround {
   padding-top: 8rem !important;
   background-color: #FDE4AF !important;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Sombra suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .tab-content {
@@ -28,7 +25,6 @@
   border-bottom: none;
   background-color: #30646B !important;
   border-radius: 10px;
-
 }
 
 .nav-tabs .nav-link {
@@ -45,45 +41,34 @@
 
 .nav-tabs .nav-link:hover {
   background-color: #e9f5ec;
-  /* Fondo claro al pasar el ratón */
   color: #30646B;
-  /* Verde más oscuro */
 }
 
 .nav-tabs .nav-link.active {
   background-color: #497D56;
-  /* Fondo del activo */
   color: #fff;
-  /* Texto blanco */
   border: 1px solid #497D56;
 }
 
 /* Estilo para las tarjetas (Cards) */
 .card {
   border: none;
-  /* Sin borde */
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Sombra suave */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  /* Ampliar al pasar el ratón */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  /* Sombra más prominente */
+  transform: scale(1.05); /* Ampliar al pasar el ratón */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más prominente */
 }
 
 /* Imagen del producto */
 .card-img-top {
-  height: 200px;
-  /* Altura fija */
-  object-fit: cover;
-  /* Mantener proporción de la imagen */
-  border-bottom: 2px solid #e9f5ec;
-  /* Línea de separación */
+  height: 200px; /* Altura fija */
+  object-fit: cover; /* Mantener proporción de la imagen */
+  border-bottom: 2px solid #e9f5ec; /* Línea de separación */
 }
 
 /* Cuerpo de la tarjeta */
@@ -100,24 +85,40 @@
 
 .card-text {
   color: #ffffff !important;
-  /* Gris */
   margin-bottom: 1rem;
 }
 
 /* Botón "Comprar" */
-.btn-primary {
+.btnComprar {
   background-color: #E4572E;
   color: #ffffff;
   border: 1px solid #ffffff;
   padding: 0.1rem 0.5rem;
   border-radius: 0.3rem;
-  margin-left: 1rem;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+.btnComprar:hover {
+  background-color: #ffffff;
+  color: #E4572E;
+  border: 1px solid #E4572E;
+}
+
+/* Botón "Agregar al Carrito" */
+.btnAgregar {
+  background-color: #E4572E;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btnAgregar:hover {
   background-color: #ffffff;
   color: #E4572E;
   border: 1px solid #E4572E;

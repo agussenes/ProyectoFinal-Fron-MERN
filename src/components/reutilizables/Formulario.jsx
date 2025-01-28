@@ -1,91 +1,105 @@
-import './formularioCSS.css'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import './formularioCSS.css';
 
 const Formulario = () => {
-  const [formInfo, setFormInfo] = useState({
+  const [formData, setFormData] = useState({
     nombre: '',
     email: '',
     telefono: '',
-    mensaje: ''
+    mensaje: '',
   });
 
-  const [enviado, setEnviado] = useState(false);
+  const [mensajeExito, setMensajeExito] = useState('');
+  const [mensajeError, setMensajeError] = useState('');
 
-  const handleCambios = (e) => {
-    setFormInfo({
-      ...formInfo,
-      [e.target.name]: e.target.value
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleEnviar = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Datos enviados:', formInfo);
-    
-    setEnviado(true);
+    setMensajeExito('');
+    setMensajeError('');
 
-    setFormInfo({
-      nombre: '',
-      email: '',
-      telefono: '',
-      mensaje: ''
-    });
+    try {
+      const response = await fetch('http://localhost:3000/api/contacto', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setMensajeExito('¡Gracias por contactarnos! Te responderemos pronto.');
+        setFormData({ nombre: '', email: '', telefono: '', mensaje: '' }); // Limpar formulário
+      } else {
+        const errorData = await response.json();
+        setMensajeError(errorData.error || 'Hubo un error al enviar el formulario.');
+      }
+    } catch (err) {
+      setMensajeError('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
+    }
   };
 
   return (
-    <div className='contenedorGeneralFormulario'>
-      {!enviado ? ( 
-        <form onSubmit={handleEnviar}>
-          <div>
-            <label htmlFor="nombre" className='boxNombre'>Nombre:</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              value={formInfo.nombre}
-              onChange={handleCambios}
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className='marginEmail'>Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formInfo.email}
-              onChange={handleCambios}
-            />
-          </div>
-          <div>
-            <label htmlFor="telefono">Teléfono:</label>
-            <input
-              type="tel"
-              id="telefono"
-              name="telefono"
-              value={formInfo.telefono}
-              onChange={handleCambios}
-            />
-          </div>
-          <div className='boxMensaje'>
-            <label htmlFor="mensaje">Mensaje:</label>
-            <input
-              type="text"
-              id="mensaje"
-              name="mensaje"
-              value={formInfo.mensaje}
-              onChange={handleCambios}
-            />
-          </div>
-          <div className='botonEnviar'>
-            <button type="submit">Enviar</button>
-          </div>
-        </form>
-      ) : (
-        <div className='mensajeEnviado'>
-          <h3>¡Gracias por tu mensaje!</h3>
-          <p>Nos pondremos en contacto contigo pronto.</p>
+    <div className="contenedorGeneralFormulario">
+      <form className="formulario-contacto" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            value={formData.nombre}
+            onChange={handleChange}
+            placeholder="Ingresa tu nombre"
+            required
+          />
         </div>
-      )}
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Ingresa tu email"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="telefono">Teléfono:</label>
+          <input
+            type="text"
+            id="telefono"
+            name="telefono"
+            value={formData.telefono}
+            onChange={handleChange}
+            placeholder="Ingresa tu teléfono"
+          />
+        </div>
+        <div className="boxMensaje">
+          <label htmlFor="mensaje">Mensaje:</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            value={formData.mensaje}
+            onChange={handleChange}
+            placeholder="Escribe tu mensaje"
+            required
+          ></textarea>
+        </div>
+        <div className="botonEnviar">
+          <button type="submit">Enviar</button>
+        </div>
+        {mensajeExito && <p className="mensajeExito">{mensajeExito}</p>}
+        {mensajeError && <p className="mensajeError">{mensajeError}</p>}
+      </form>
     </div>
   );
 };
