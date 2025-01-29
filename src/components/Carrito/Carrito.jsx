@@ -9,7 +9,7 @@ const Carrito = () => {
   const navigate = useNavigate(); 
 
   const handleFinalizarCompra = () => {
-    navigate('/login'); 
+    navigate('/checkout'); 
   };
 
   return (

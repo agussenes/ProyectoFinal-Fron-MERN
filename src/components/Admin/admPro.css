@@ -8,9 +8,9 @@
 }
 
 button {
-    background-color: #E4572E;
+    background-color: #E4572E !important;
     color: #ffffff;
-    border: 1px solid #ffffff;
+    border: 1px solid #ffffff !important;
     padding: 0.1rem 0.5rem;
     border-radius: 0.3rem;
     margin-left: 1rem;
@@ -21,9 +21,9 @@ button {
 }
 
 button:hover {
-    background-color: #ffffff;
-    color: #E4572E;
-    border: 1px solid #E4572E;
+    background-color: #ffffff !important;
+    color: #E4572E !important;
+    border: 1px solid #E4572E !important;
 
 }
 

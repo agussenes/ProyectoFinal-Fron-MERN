@@ -40,7 +40,7 @@ export const AdmProductos = () => {
             <Container className="my-4">
                 <Row className="mb-4 justify-content-evenly">
                     <Col xs="auto" >
-                        <AgregarProductos />
+                        <AgregarProductos className="prueba"/>
                     </Col>
                     <Col xs="auto">
                         <ActProductos onProductUpdate={handleUpdate} />
