@@ -179,21 +179,21 @@ body {
     }
 }
 
-/* Estilo para toda a scrollbar */
+
 ::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra */
+    width: 12px; 
 }
 
 ::-webkit-scrollbar-track {
-    background: #f0f0f000 !important; /* Color del fondo del track */
+    background: #f0f0f000 !important; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #497D56; /* Color del "pulgar" de la barra */
-    border-radius: 6px; /* Bordes redondeados */
-    border: 2px solid #f0f0f0; /* Espacio entre el "pulgar" y el track */
+    background-color: #497D56; 
+    border-radius: 6px; 
+    border: 2px solid #f0f0f0; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #3a5d47; /* Color cuando se pasa el mouse */
+    background-color: #3a5d47; 
 }

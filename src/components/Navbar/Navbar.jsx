@@ -9,13 +9,13 @@ const Navbar = () => {
   const { user, carrito, logout } = useContext(UserContext); 
   const navigate = useNavigate();
 
-  // Total de produtos no carrinho (considerando a quantidade de cada item)
+
   const totalProductos = carrito.reduce(
     (total, producto) => total + (producto.cantidad || 1), 
     0
   );
 
-  // Função de logout
+ 
   const handleLogout = () => {
     logout();
     navigate('/login');
