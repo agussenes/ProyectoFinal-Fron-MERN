@@ -10,7 +10,7 @@ const BodyMain = () =>{
         <QuienesSomos/>
         <ContainerAccion/>
         {/* <ProdcutosDestacados/> */}
-        <Productos/>
+        
         </>
     )
 }
