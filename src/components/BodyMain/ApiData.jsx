@@ -39,7 +39,7 @@ function ApiData() {
 
   return (
     <div className='contenedorGeneral'>
-      <h2>Productos Destacados</h2>
+      <h2>PRODUCTOS DESTACADOS</h2>
       <div className="productos">
         {datos.map((producto) => (
           <div key={producto.id} className="producto">
@@ -47,7 +47,7 @@ function ApiData() {
             <img src={producto.imagen} alt={producto.titulo} />
             <hr></hr>
             <p>{producto.descripcion}</p>
-            <Link to={`/detalle/${producto.id}`}><button className='botonProducto'>Ver detalle</button></Link>
+            <Link to={`/Productos`}><button className='botonProducto'>Ver detalle</button></Link>
           </div>
         ))}
       </div>

@@ -35,7 +35,7 @@ section1 {
     background-color: #f1d28f;
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 10rem;
+    padding-top: 6.6rem;
     padding-bottom: 30px;
     padding-right: 150px;
     padding-left: 150px;
@@ -80,8 +80,6 @@ section1 {
     margin: 10px;
 }
 
-
-.carousel-item {}
 
 .carousel-item img {
     width: 100%;

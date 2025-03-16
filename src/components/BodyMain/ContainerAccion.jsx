@@ -12,7 +12,7 @@ const ContainerAccion = () => {
           <img src={atencionCliente} alt="icono atencion al cliente" />
           <Link to={"/Contacto"} id='linkAccion'><h3>Atención Personalizada</h3></Link>
         </div></Link>
-      <Link to={"./Catalogo"} id='linkAccion'>
+      <Link to={"./Contacto"} id='linkAccion'>
         <div className="accion">
           <img src={disenoPersonalizado} alt="diseño personalizado" />
           <Link to={"/"} id='linkAccion'><h3>Diseños Personalizados</h3></Link>

@@ -24,77 +24,61 @@ body {
 
 /* --- Logo --- */
 .brand img {
-    max-height: 3.5rem;
+    max-height: 2.5rem;
 }
 
-/* --- Barra de Búsqueda --- */
-.searchBar {
-    flex-grow: 1;
-    margin-left: 2rem;
-    display: flex;
-    align-items: center;
-    max-width: 200px;
-}
-
-.searchBar input {
-    width: 20rem;
-    padding: 0.6rem;
-    font-size: 0.9rem;
-    border: 1px solid #83b692;
-    border-radius: 2rem;
-    background-color: #567e60;
+/* --- Menu Hamburguer (Mobile) --- */
+.menuIcon {
+    display: block;
+    font-size: 2rem;
     color: white;
+    cursor: pointer;
 }
 
-.searchBar input::placeholder {
-    color: #c9e4d7;
-    opacity: 0.8;
-}
-
-/* --- Navbar Links --- */
+/* --- Menu para Mobile --- */
 .navBar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    background-color: #30646B;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.navBar.show {
     display: flex;
-    align-items: center;
 }
 
 .navLinks {
-    display: flex;
-    gap: 1rem;
-    margin-right: 2rem;
-    list-style: none !important;
-    text-decoration: none !important;
-}
-
-.navLinks a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.3rem !important;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    border-radius: 0.3rem;
+    list-style: none;
+    padding: 0;
 }
 
 .navLinks li {
-    transition: all 0.3s ease;
+    padding: 0.8rem 0;
 }
 
-.navLinks li:hover {
-    color: #fde4af;
-    transform: scale(1.1) !important;
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.navLinks a:hover {
+.navLinks li:hover a {
     color: #fde4af;
-    transform: scale(1.1) !important;
 }
 
 /* --- Carrito --- */
 .carritoNavbar {
-    display: flex;
-    align-items: center;
     font-size: 1.2rem;
     color: white;
-    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .carritoNavbar:hover {
@@ -104,96 +88,123 @@ body {
 .carritoTotalNav {
     font-size: 0.9rem;
     color: #ff8a67;
-    margin-left: 0.3rem;
     font-weight: 700;
 }
 
-/* --- Botones de Login/Registro --- */
-.navButtons .navButton {
+/* --- Botões de Login/Registro --- */
+.navButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.navButton {
     background-color: #E4572E;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    padding: 0.1rem 0.5rem;
+    color: white;
+    border: 1px solid white;
+    padding: 0.3rem 1rem;
     border-radius: 0.3rem;
-    margin-left: 1rem;
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease;
     text-decoration: none;
+    width: 80%;
+    text-align: center;
 }
 
-.navButtons .navButton:hover {
-    background-color: #ffffff;
+.navButton:hover {
+    background-color: white;
     color: #E4572E;
     border: 1px solid #E4572E;
 }
 
-.navButtons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-/* --- Responsive Styles --- */
-@media screen and (max-width: 900px) {
+/* --- Responsividade: 401px até 901px --- */
+@media screen and (min-width: 401px) and (max-width: 900px) {
     .menuIcon {
         display: block;
     }
 
-    .navLinks {
+    .navBar {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 4.5rem;
+        left: 0;
         width: 100%;
         background-color: #30646B;
         padding: 1rem 0;
+        text-align: center;
     }
 
-    .navLinks.show {
+    .navBar.show {
         display: flex;
     }
 
-    .navLinks li {
-        padding: 0.5rem 0;
+    .navLinks {
+        flex-direction: column;
     }
 
-    .searchBar {
-        display: none;
+    .navButtons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin-left: auto;
+    }
+
+    .navButton {
+        width: auto;
     }
 }
 
-@media screen and (min-width: 900px) {
+/* --- Telas maiores que 901px --- */
+@media screen and (min-width: 901px) {
     .menuIcon {
         display: none;
     }
 
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+    }
+
+    .containerNavbar {
+        max-height: 75px;
+    }
+
+    .carritoNavbar {
+        padding-top: 21px;
+    }
+
     .navLinks {
         display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        font-weight: bold;
+    }
+
+    .navLinks li {
+        align-content: center;
+        padding-top: 30px;
+    }
+
+    .navLinks a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .navButtons {
+        flex-direction: row;
         align-items: center;
+        gap: 1rem;
     }
 
-    .searchBar {
-        display: flex;
+    .navButton {
+        width: auto;
     }
-}
-
-
-::-webkit-scrollbar {
-    width: 12px; 
-}
-
-::-webkit-scrollbar-track {
-    background: #f0f0f000 !important; 
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #30646B; 
-    border-radius: 6px; 
-    border: 2px solid #f0f0f0; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #30646B; 
 }
