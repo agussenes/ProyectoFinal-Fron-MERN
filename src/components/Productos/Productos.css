@@ -1,15 +1,20 @@
 /* Estilo general para el contenedor principal */
 .contenedorGeneralProductos {
   background-color: #f1d28f;
+  padding-top: 6.6rem;
+  padding-bottom: 2.3rem;
 }
 
 .backGround {
-  padding-top: 8rem !important;
-  background-color: #FDE4AF !important;
+  padding-top: 2rem;
+  background-color: #FDE4AF;
   padding: 2rem;
+
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding-bottom: 20px;
 }
+
 
 .tab-content {
   background-color: #FDE4AF !important;
@@ -23,7 +28,7 @@
 .nav-tabs {
   justify-content: center;
   border-bottom: none;
-  background-color: #30646B !important;
+  background-color: #497D56 !important;
   border-radius: 10px;
 }
 
@@ -74,7 +79,7 @@
 /* Cuerpo de la tarjeta */
 .card-body {
   text-align: center;
-  background-color: #30646B;
+  background-color: #497D56;
 }
 
 .card-title {

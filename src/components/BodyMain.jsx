@@ -1,7 +1,8 @@
-import Productos from "./Productos/productos";
+
 import "./BodyMain/ApiDataCss.css";
 import QuienesSomos from "./BodyMain/QuienesSomos";
 import ContainerAccion from "./BodyMain/ContainerAccion";
+import ApiData from "./BodyMain/ApiData";
 // import ProdcutosDestacados from "./BodyMain/ProdcutosDestacados";
 
 const BodyMain = () =>{
@@ -10,7 +11,7 @@ const BodyMain = () =>{
         <QuienesSomos/>
         <ContainerAccion/>
         {/* <ProdcutosDestacados/> */}
-        <Productos/>
+        <ApiData/>
         </>
     )
 }

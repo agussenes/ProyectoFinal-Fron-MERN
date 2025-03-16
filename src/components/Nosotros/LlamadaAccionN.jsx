@@ -7,7 +7,7 @@ const LlamadaAccionN = () => {
         <>
             <div className="containerButtom">
                 <Link to="/Contacto">
-                    <Button variant="success">Contactate!</Button>
+                    <Button variant="success">Contactate</Button>
                 </Link>
             </div>
         </>

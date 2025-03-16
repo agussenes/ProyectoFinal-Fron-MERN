@@ -1,47 +1,49 @@
-
-
-.ContainerGenContacto{
+.ContainerGenContacto {
     background-color: #F1D28F;
     margin-top: -1rem;
     min-height: 60vh;
 }
 
-.formYubi{
+.formYubi {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding-bottom: 15px;
+
+
 }
 
-.cabecera{
-    margin-top: 5rem;
+.cabecera {
+    margin-top: 1.6rem;
     text-align: center;
-    padding-top: 6rem;
-    padding-bottom: 1rem;    
+    padding: 6rem 5rem 1rem;
 }
 
-.cabecera h2{    
+.cabecera h2 {
     font-size: 24px;
     font-weight: bolder;
     color: #13373b;
     padding: 1.2rem 0;
-    background-color:#fde4af;
+    background-color: #fde4af;
     border-radius: .6rem;
-    margin-left: 2rem;
-    margin-right:2rem;
+    margin: 0 2rem;
 }
 
-.ubicacion{
+.ubicacion {
     padding: 1rem;
+    text-align: center;
+    background-color: #FDE4AF;
+    border-radius: 2rem;
+    max-width: 90%;
+    margin: auto;
 }
 
-.ubicacion h3{
-    text-align: center;
-    font-weight: 500;
-    color: #13373b;
+.ubicacion h3 {
     font-size: 22px;
     font-weight: bolder;
+    color: #13373b;
 }
 
-.redesSociales{
+.redesSociales {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,99 +51,61 @@
     font-size: 3rem;
 }
 
-.redesSociales div:hover{
+.redesSociales div:hover {
     font-size: 3.5rem;
     transition: 0.5s;
     cursor: pointer;
-  
 }
 
-.formulario{
+.formulario {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 5px;
 }
-.contenedorredesflex{
+
+.contenedorredesflex {
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
 }
 
-@media screen and (max-width: 767px){
-    .formYubi{
-        grid-template-columns: 1fr;
+@media screen and (min-width: 401px) {
+    .formYubi {
+        padding: .5rem;
     }
 
-}
-
-@media screen and (max-width: 991px){
-    .formYubi{
-        grid-template-columns: 1fr;
+    .contenedorredesflex {
+        padding-bottom: 10px;
     }
-
-}
-
-@media screen and (max-width: 1024px){
-    .formYubi{
-        grid-template-columns: 1fr;
-    }
-
-    .redesSociales{
+    .redesSociales {
         display: grid;
-        grid-template-columns: repeat( 3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
-
 }
 
-@media screen and (max-width: 1360px){
-    .redesSociales{
-        display: grid;
-        grid-template-columns: repeat( 3, 1fr);
+@media screen and (min-width: 901px) {
+    .formYubi {
+        grid-template-columns: 1fr 1fr;
+        padding: 4rem;
+        margin-top: -35px;
+        margin-bottom: -45px;
     }
-
+    .ubicacion {
+        max-width: 60%;
+    }
 }
 
-@media screen and (max-width: 1920px){
-   
-    .formYubi{
-        padding-right: 12rem;
-        padding-left: 12rem;
+@media screen and (min-width: 1301px) {
+    .formYubi {
+        padding: 6rem 12rem;
+        margin-top: -65px;
+        margin-bottom: -79px;
     }
-
-    .redesSociales{
-        display: grid;
-        grid-template-columns: repeat( 3, 1fr);
-        
-        
+    .ubicacion {
+        max-width: 50%;
     }
-    
-    .ubicacion{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: #FDE4AF;
-        width: max-content;
-        height: max-content;
-        border-radius: 2rem;
-    }
-
-   
-
-    .facebook{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .instagram{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .whatsapp{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
 }

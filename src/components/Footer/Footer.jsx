@@ -34,7 +34,7 @@ const Footer = () => {
                         <ul className="info">
                             <li>
                                 <span><FontAwesomeIcon icon={faMapMarker} /></span>
-                                <span>Mendiolaza, Córdoba-Argentina</span>
+                                <span>Buenos Aires - Argentina</span>
                             </li>
                             <li>
                                 <span><FontAwesomeIcon icon={faPhone} /></span>
@@ -64,7 +64,7 @@ const Footer = () => {
 
             </footer>
             <div className="copyrightsec">
-                <p>&copy; 2024 Agus - Patri. Todos los derechos reservados</p>
+                <p>&copy; 2024 Brian Ferreyra y Patricia Araldi. Todos los derechos reservados</p>
             </div>
             <FooterButton />
         </>

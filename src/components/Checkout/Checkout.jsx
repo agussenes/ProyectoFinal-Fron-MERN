@@ -19,7 +19,7 @@ const Checkout = () => {
   const handleModalClose = () => setShowModal(false);
 
   const handleWhatsAppRedirect = () => {
-    const numeroWhatsApp = '5493513893394'; // Cambia por tu número de WhatsApp
+    const numeroWhatsApp = '5549999055517'; // Cambia por tu número de WhatsApp
     const mensaje = encodeURIComponent(
       `¡Hola! Quiero confirmar mi pedido: ${carrito
         .map((item) => `${item.nombre} - $${item.precio} - Id:${item._id}`)
